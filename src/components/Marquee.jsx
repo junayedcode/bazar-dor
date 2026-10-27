@@ -1,13 +1,10 @@
-
 import MarqueeText from "react-fast-marquee";
 
 const getProducts = async () => {
   "use cache";
-
   const res = await fetch(
     "https://api.api-store.workers.dev/api/bazardor/products"
   );
-
   return res.json();
 };
 
@@ -28,11 +25,7 @@ const Marquee = async () => {
 
   return (
     <div className="w-full overflow-hidden border-y border-gray-200 bg-white py-3">
-      <MarqueeText
-        speed={140}
-        direction="left"
-        
-      >
+      <MarqueeText speed={140}   direction="left" >
         {updatedData.map((m, i) => (
           <span
             key={i}
