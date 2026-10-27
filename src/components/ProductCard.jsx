@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
   return (
     <div className="w-full max-w-[320px] bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col gap-3 font-sans">
 
-      {/* ইমেজ সেকশন */}
+    
       <div className="flex items-center gap-3">
         <div className="w-12 h-12 bg-[#f4f7f4] rounded-xl flex items-center justify-center overflow-hidden shrink-0">
           {product.image?.startsWith('http') ||
@@ -38,14 +38,14 @@ const ProductCard = ({ product }) => {
         </div>
       </div>
 
-      {/* দাম লেবেল */}
+    
       <div className="mt-1">
         <span className="text-[13px] text-gray-600">
           আজকের দাম
         </span>
       </div>
 
-      {/* দাম এবং পার্সেন্টেজ */}
+    
       <div className="flex justify-between items-end mt-1">
         <div className="text-[22px] font-bold text-gray-900 leading-none">
           {product.price ?? product.today}{' '}

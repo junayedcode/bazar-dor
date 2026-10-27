@@ -4,6 +4,7 @@ import Link from "next/link";
 import Growup from "./Growup";
 import { Suspense } from "react";
 import Decrease from "./Decrease";
+import Allproduct from "./Allproduct";
 
 const HomePage = () => {
   return (
@@ -49,8 +50,11 @@ const HomePage = () => {
       <Suspense fallback={<p>লোড হচ্ছে...</p>}>
   <Growup />
 </Suspense>
-      <Suspense fallback={<p>লোড হচ্ছে...</p>}>
+      <Suspense>
   <Decrease/>
+</Suspense>
+      <Suspense>
+  <Allproduct/>
 </Suspense>
    </div> 
 
