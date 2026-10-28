@@ -37,7 +37,7 @@ const Header = () => {
 
           </Link>
 
-          {/* Sign In and Sign Up */}
+         
          <Userinfo/>
          
         </header>

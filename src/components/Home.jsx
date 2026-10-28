@@ -33,7 +33,7 @@ const HomePage = () => {
             </Link>
           </div>
 
-          {/* Right Image */}
+        
           <div className="relative ml-4 hidden h-40 w-40 shrink-0 sm:block md:h-52 md:w-52">
             <Image
               src="/assets/bazar-hero.png"

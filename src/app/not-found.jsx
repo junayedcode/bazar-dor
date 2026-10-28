@@ -7,7 +7,7 @@ const NotFound = () => {
     <div className="flex min-h-[75vh] items-center justify-center bg-[#f4f8f4] px-4 py-16 font-sans">
       <div className="w-full max-w-xl text-center">
         
-        {/* ওয়েবসাইটের লোগো বা ব্র্যান্ড নাম */}
+     
         <Link
           href="/"
           className="mb-8 inline-block text-2xl font-extrabold tracking-tight text-gray-900"
@@ -15,15 +15,15 @@ const NotFound = () => {
           বাজার দর <span className="text-green-600">বিডি</span>
         </Link>
 
-        {/* 404 নাম্বার */}
+      
         <h1 className="text-8xl font-black tracking-tighter text-green-600 sm:text-9xl">
           404
         </h1>
 
-        {/* ডিভাইডার */}
+     
         <div className="mx-auto my-6 h-1 w-20 rounded-full bg-green-600" />
 
-        {/* মেসেজ */}
+      
         <h2 className="mb-3 text-2xl font-bold text-gray-900 sm:text-3xl">
           দুঃখিত! পেজটি খুঁজে পাওয়া যায়নি।
         </h2>
@@ -33,7 +33,7 @@ const NotFound = () => {
           ঠিকানা পরিবর্তন হয়েছে অথবা পেজটি আর উপলব্ধ নেই।
         </p>
 
-        {/* হোম বাটন */}
+     
         <Link
           href="/"
           className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-700 px-7 py-3 font-semibold text-white transition duration-200 hover:bg-green-800"
@@ -42,7 +42,7 @@ const NotFound = () => {
           হোম পেজে ফিরে যান
         </Link>
 
-        {/* ফুটার */}
+       
         <p className="mt-10 border-t border-gray-200 pt-5 text-sm text-gray-400">
           সঠিক দামের সন্ধানে, সবার আগে
         </p>
