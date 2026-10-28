@@ -1,12 +1,14 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const ProductCard = ({ product }) => {
   const isUp = product.change?.dir === 'up';
   const percentage = Math.abs(product.change?.pct ?? 0);
 
   return (
+    <Link href={`/products/${product.id}`}>
     <div className="w-full max-w-[320px] bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col gap-3 font-sans">
 
     
@@ -67,12 +69,13 @@ const ProductCard = ({ product }) => {
 
           <span>
             {product.change?.dir === 'flat'
-              ? 'পরিবর্তন নেই'
+              ? '০.০%'
               : `${percentage}%`}
           </span>
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 
