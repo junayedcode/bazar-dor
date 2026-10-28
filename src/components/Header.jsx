@@ -1,8 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Header = () => {
   return (
+<Link href="/">
     <div className="w-full py-4 font-sans">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,6 +39,7 @@ const Header = () => {
 
       </div>
     </div>
+</Link>
   );
 };
 

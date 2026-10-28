@@ -25,7 +25,7 @@ const ProductCard = ({ product }) => {
             />
           ) : (
             <span className="text-2xl">
-              {product.image || '🛒'}
+              {product.image}
             </span>
           )}
         </div>

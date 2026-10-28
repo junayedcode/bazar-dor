@@ -27,7 +27,7 @@ const HomePage = () => {
           </p>
 
           <Link
-            href="/products"
+            href="/product"
             className="mt-4 inline-block rounded-md bg-green-700 px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-green-800"
           >
             সব পণ্যের দাম দেখুন
