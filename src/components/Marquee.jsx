@@ -1,3 +1,4 @@
+import Link from "next/link";
 import MarqueeText from "react-fast-marquee";
 
 const getProducts = async () => {
@@ -26,9 +27,9 @@ const Marquee = async () => {
   return (
     <div className="w-full overflow-hidden border-y border-gray-200 bg-white py-3">
       <MarqueeText speed={140}   direction="left" >
-        {updatedData.map((m, i) => (
+        {updatedData.map(m => ( <Link href={`/products/${m.id}`} key={m.id}>
           <span
-            key={i}
+           
             className="mr-8 inline-flex items-center gap-2 whitespace-nowrap text-sm"
           >
             {m.image}
@@ -52,6 +53,7 @@ const Marquee = async () => {
               {Math.abs(m.change.pct)}%
             </span>
           </span>
+           </Link>
         ))}
       </MarqueeText>
     </div>

@@ -47,7 +47,7 @@ const HomePage = () => {
         </div>
       </div>
     </section>
-                  <Suspense fallback={<p>লোড হচ্ছে...</p>}>
+                  <Suspense>
               <Growup />
             </Suspense>
                   <Suspense>
