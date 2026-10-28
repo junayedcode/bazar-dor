@@ -30,7 +30,7 @@ async function CategoryData({ params }) {
     const data = await res.json();
     const products = Array.isArray(data) ? data : data.products || [];
 
-    const categoryName = products[0]?.categoryNameBn || 'চাল';
+    const categoryName = products[0]?.categoryNameBn;
     const totalProducts = products.length;
 
     return (
@@ -59,21 +59,22 @@ async function CategoryData({ params }) {
                     </h1>
 
                     <p className="text-[13px] text-gray-500 mt-1 m-0">
-                        {totalProducts}টি পণ্য • আজকের বাজার দর • সর্বশেষ আপডেট
+                        {totalProducts}টি পণ্যের আজকের দাম ও পরিবর্তন
                     </p>
                 </div>
             </div>
 
             {/* Product Heading */}
-            <div className="mb-4">
-                <h2 className="text-[15px] font-bold text-gray-800 m-0">
-                    এই ক্যাটাগরির সব পণ্য
-                </h2>
-            </div>
+            <div>
+                    <p className="text-[13px] text-gray-500 mt-1 m-0">
+                     মোট {totalProducts} টি পণ্য দেখানো হচ্ছে
+                    </p>
+                </div>
 
-            {/* Products: Render only once */}
+           
             {products.length > 0 ? (
                 <CategoryProducts products={products} />
+                
             ) : (
                 <div className="text-center p-10 text-gray-500 bg-white rounded-2xl border border-gray-100">
                     এই ক্যাটাগরিতে কোনো পণ্য পাওয়া যায়নি।
