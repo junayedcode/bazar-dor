@@ -16,7 +16,7 @@ const Navlinks = async () => {
     const data = await getCategories();
 
     return (
-        <div className="flex flex-wrap gap-8 justify-center items-center max-w-7xl mx-auto mt-5 px-4">
+       <div className="flex flex-wrap gap-8 justify-center items-center max-w-7xl mr-auto ml-24 mt-2 px-4">
             {data.map((nave, i) => (
                 <Link
                     href={`/category/${nave.id}`}

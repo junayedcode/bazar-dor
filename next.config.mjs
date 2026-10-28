@@ -1,16 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
-   images: {
+  images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'cdn-icons-png.flaticon.com',
-        port: '',
-        pathname: '/**', // যেকোনো পাথ থেকে ছবি লোড করার অনুমতি
+        hostname: '**', // ⚠️ যেকোনো ডোমেইনের ছবি লোড করার জন্য
       },
     ],
   },
+
   experimental: {
     agentFeedback: true,
   },

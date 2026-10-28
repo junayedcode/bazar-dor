@@ -1,17 +1,16 @@
+
 import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-white border-t border-gray-200 py-3 mt-auto">
-      <div className="mx-auto max-w-6xl px-4 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
-        
-      
-        <p className="text-[12px] text-gray-500 m-0 text-center md:text-left">
+    <footer className="mt-auto w-full border-t border-gray-200 bg-white py-2">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-1 px-3 md:flex-row md:gap-0">
+
+        <p className="m-0 text-center text-[9px] text-gray-500 md:text-left">
           বাজার দর — প্রয়োজনীয় পণ্যের দাম এক নজরে।
         </p>
 
-    
-        <p className="text-[12px] text-gray-500 m-0 text-center md:text-right">
+        <p className="m-0 text-center text-[9px] text-gray-500 md:text-right">
           সকল দাম সম্ভাব্য; বাজার অবস্থার ওপর নির্ভর করে পরিবর্তিত হয়।
         </p>
 
