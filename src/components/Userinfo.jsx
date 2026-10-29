@@ -29,7 +29,6 @@ const Userinfo = () => {
             {user ? (
            
                 <div className="dropdown dropdown-end">
-                    {/* ট্রিগার বাটন */}
                     <div tabIndex={0} role="button" className="flex items-center gap-2 cursor-pointer p-1 rounded-lg hover:bg-gray-100 transition">
                         
                    

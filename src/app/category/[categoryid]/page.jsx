@@ -1,7 +1,7 @@
-
 import React, { Suspense } from 'react';
 import Link from 'next/link';
 import CategoryProducts from '@/components/CategoryProducts';
+import { notFound } from 'next/navigation';
 
 const Categorypage = ({ params }) => {
     return (
@@ -30,13 +30,18 @@ async function CategoryData({ params }) {
     const data = await res.json();
     const products = Array.isArray(data) ? data : data.products || [];
 
+   
+    if (!products || products.length === 0) {
+        notFound();
+    }
+
     const categoryName = products[0]?.categoryNameBn;
     const totalProducts = products.length;
 
     return (
         <div className="max-w-6xl mx-auto px-4 py-6">
 
-            {/* Breadcrumb */}
+         
             <div className="text-[12px] text-gray-500 flex items-center gap-2 mb-4">
                 <Link href="/" className="hover:text-green-600">
                     হোম
@@ -47,7 +52,7 @@ async function CategoryData({ params }) {
                 </Link>
             </div>
 
-            {/* Category Header */}
+          
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex items-center gap-4 mb-4">
                 <div className="w-14 h-14 bg-[#f4f7f4] rounded-full flex items-center justify-center text-3xl shadow-inner shrink-0">
                     {products[0]?.categoryIcon}
@@ -63,23 +68,14 @@ async function CategoryData({ params }) {
                     </p>
                 </div>
             </div>
-
-          
+        
             <div>
-                    <p className="text-[13px] text-gray-500 mt-1 m-0">
-                     মোট {totalProducts} টি পণ্য দেখানো হচ্ছে
-                    </p>
-                </div>
+                <p className="text-[13px] text-gray-500 mt-1 m-0">
+                   মোট {totalProducts} টি পণ্য দেখানো হচ্ছে
+                </p>
+            </div>
 
-           
-            {products.length > 0 ? (
-                <CategoryProducts products={products} />
-                
-            ) : (
-                <div className="text-center p-10 text-gray-500 bg-white rounded-2xl border border-gray-100">
-                    এই ক্যাটাগরিতে কোনো পণ্য পাওয়া যায়নি।
-                </div>
-            )}
+            <CategoryProducts products={products} />
 
         </div>
     );

@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { auth } from './lib/auth' // ⚠️ আপনার পাথ অনুযায়ী ঠিক করুন
+import { auth } from './lib/auth'
 import { headers } from 'next/headers'
 
 
@@ -20,5 +20,5 @@ export async function proxy(request) {
 }
 
 export const config = {
-  matcher: ['/profile', '/product/:path*'],
+  matcher: ['/profile', '/products/:path*'],
 }

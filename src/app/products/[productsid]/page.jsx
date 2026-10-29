@@ -1,6 +1,6 @@
-
 import React, { Suspense } from 'react';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 
 export default function ProductDetails({ params }) {
   return (
@@ -25,14 +25,14 @@ async function ProductData({ params }) {
   );
 
   if (!res.ok) {
-    return (
-      <div className="text-center p-10 text-red-500 font-bold">
-        পণ্যটি পাওয়া যায়নি!
-      </div>
-    );
+    notFound();
   }
 
   const data = await res.json();
+  if (!data || !data.nameBn) {
+    notFound();
+  }
+
   const isUp = data.change?.dir === 'up';
 
   const sortedMarkets = data.markets
