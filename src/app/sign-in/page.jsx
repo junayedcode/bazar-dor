@@ -39,11 +39,14 @@ const SignInpage = () => {
   };
 
 
-  const handlegithubSignin = async () => {
-    await authClient.signIn.social({
-      provider: "github",
-    });
-  };
+const handlegithubSignin = async () => {
+  const result = await authClient.signIn.social({
+    provider: "github",
+    callbackURL: "/",
+  });
+
+  console.log("GitHub Login Result:", result);
+};
 
   return (
     <div className="min-h-screen bg-[#f4f8f4] flex flex-col items-center justify-center py-10 px-4 font-sans">

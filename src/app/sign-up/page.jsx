@@ -37,10 +37,13 @@ const SingUppage = () => {
   });
 };
  const handlegithubSignin = async () => {
-    await authClient.signIn.social({
-      provider: "github",
-    });
-  };
+  const result = await authClient.signIn.social({
+    provider: "github",
+    callbackURL: "/",
+  });
+
+  console.log("GitHub Login Result:", result);
+};
   
 
   return (
