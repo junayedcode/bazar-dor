@@ -70,9 +70,7 @@ async function CategoryData({ params }) {
             </div>
         
             <div>
-                <p className="text-[13px] text-gray-500 mt-1 m-0">
-                   মোট {totalProducts} টি পণ্য দেখানো হচ্ছে
-                </p>
+               
             </div>
 
             <CategoryProducts products={products} />

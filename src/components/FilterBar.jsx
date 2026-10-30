@@ -2,6 +2,7 @@
 "use client";
 
 export default function FilterBar({ sortOrder, setSortOrder }) {
+  
   return (
     <div className="w-full bg-white rounded-2xl p-3 px-4 shadow-sm border border-gray-100 flex justify-end items-center gap-3">
       <span className="text-[13px] text-gray-500 font-medium">
@@ -17,6 +18,9 @@ export default function FilterBar({ sortOrder, setSortOrder }) {
         <option value="low-to-high">কম থেকে বেশি</option>
         <option value="high-to-low">বেশি থেকে কম</option>
       </select>
+      <div>
+                     
+                  </div>
     </div>
   );
 }
