@@ -1,12 +1,12 @@
 "use client";
 
-import { useRouter } from "next/navigation"; // ⚠️ ইমপোর্ট করুন
+import { useRouter } from "next/navigation"; 
 import { authClient } from "../../lib/auth-client";
 import toast from "react-hot-toast";
 import Link from "next/link";
 
 const SingUppage = () => {
-  const router = useRouter(); // ⚠️ ডিক্লেয়ার করুন
+  const router = useRouter(); 
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -19,9 +19,9 @@ const SingUppage = () => {
     });
     
     if (data) {
-      toast.success("সাইন আপ সফল হয়েছে"); // ✅ মেসেজ ঠিক করা হলো
+      toast.success("সাইন আপ সফল হয়েছে"); 
       console.log("Sign up Success:", data);
-      router.push("/"); // ✅ এখন কাজ করবে
+      router.push("/"); 
     }
     if (error) {
       toast.error(error.message);
