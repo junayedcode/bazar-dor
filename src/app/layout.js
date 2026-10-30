@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       data-theme="light"
       className={`${notoserifbengali.className} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col ">
         <Header/>
         <Navlinks/>
        <Suspense fallback={<div className="w-full py-3" />}>
