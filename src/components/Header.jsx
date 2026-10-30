@@ -3,6 +3,13 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Userinfo from './Userinfo';
+const today = new Date().toLocaleDateString("bn-BD", {
+  weekday: "long",
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+  timeZone: "Asia/Dhaka",
+});
 
 const Header = () => {
   return (
@@ -26,7 +33,7 @@ const Header = () => {
                 বাজার দর
               </span>
               <span className="text-[12px] text-gray-500 font-medium mt-0.5">
-                মালাদহ, ৪ ফাল্গুন, ২০২৬
+               {today}
               </span>
             </div>
           </Link>

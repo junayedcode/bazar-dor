@@ -4,6 +4,13 @@ import Growup from "./Growup";
 import { Suspense } from "react";
 import Decrease from "./Decrease";
 import Allproduct from "./Allproduct";
+const today = new Date().toLocaleDateString("bn-BD", {
+  weekday: "long",
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+  timeZone: "Asia/Dhaka",
+});
 
 const HomePage = () => {
   return (
@@ -13,7 +20,7 @@ const HomePage = () => {
           {/* Left Content */}
           <div className="max-w-xl">
             <span className="inline-block rounded-full bg-green-100 px-3 py-1 text-[10px] font-medium text-green-700">
-              সোমবার, ২৮ অক্টোবর, ২০২৬
+              {today}
             </span>
 
             <h1 className="mt-3 text-xl font-bold text-gray-800 md:text-3xl">
