@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛒 Bazar Dor – বাজার দর
 
-## Getting Started
+A modern grocery shopping platform built with Next.js, React, and Tailwind CSS.
 
-First, run the development server:
+## 🌐 Live Website
+
+[Visit Bazar Dor](https://bazar-dor-ecru-gamma.vercel.app/)
+
+## 📖 About The Project
+
+Bazar Dor is a modern grocery price browsing platform where users can explore products, browse categories, and check product prices through an easy-to-use interface.
+
+## ✨ Key Features
+
+- Browse grocery products.
+- Explore products by category.
+- View individual product details.
+- User authentication with Google and GitHub.
+- Email and password authentication.
+- Responsive user interface.
+- Dynamic product data using API integration.
+
+## 🛠️ Technologies Used
+
+- Next.js
+- React
+- JavaScript
+- Tailwind CSS
+- Better Auth
+- MongoDB
+- REST API
+- Vercel
+
+## 🔐 Authentication
+
+- Google OAuth Login
+- GitHub OAuth Login
+- Email and Password Login
+
+## 🔗 API Integration
+
+API Base URL:
+
+`https://openapi.programming-hero.com/api/bazardor`
+
+Alternative API:
+
+`https://api.api-store.workers.dev/api/bazardor`
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+### 2. Navigate to the project folder
+
+```bash
+cd bazar-dor
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Configure Environment Variables
+
+Create a `.env.local` file in the root directory.
+
+```env
+MONGODB_URL=your_mongodb_url
+BETTER_AUTH_SECRET=your_auth_secret
+BETTER_AUTH_URL=http://localhost:3000
+
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+
+GITHUB_CLIENT_ID=your_github_client_id
+GITHUB_CLIENT_SECRET=your_github_client_secret
+```
+
+### 5. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 👨‍💻 Author
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Junayed Hossen**
 
-## Learn More
+- GitHub: [@junayedcode](https://github.com/junayedcode)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+⭐ If you like this project, feel free to explore the repository!
